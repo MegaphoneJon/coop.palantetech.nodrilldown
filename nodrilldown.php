@@ -63,13 +63,16 @@ function nodrilldown_civicrm_alterReportVar($varType, &$var, &$object) {
       $link = 'civicrm_contact_display_name_link';
       $doReplace = TRUE;
     }
+    if ($object instanceOf CRM_Report_Form_Event_ParticipantListing) {
+      $link = 'civicrm_contact_sort_name_linked';
+      $doReplace = TRUE;
+    }
 
     if ($doReplace) {
       foreach ($var as $i => $row) {
         if (array_key_exists($link, $row)) {
           $var[$i][$link] = preg_replace($pattern, $replace, $row[$link]);
         }
-        CRM_Core_Error::debug_var('row', $row);
       }
     }
   }
