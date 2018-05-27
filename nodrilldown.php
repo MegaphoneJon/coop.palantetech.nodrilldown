@@ -46,23 +46,19 @@ function nodrilldown_civicrm_alterReportVar($varType, &$var, &$object) {
       $doReplace = TRUE;
     }
     if ($object instanceOf CRM_Report_Form_Contribute_History) {
-      $pattern = '/civicrm\/report\/contribute\/detail(\?|&amp;)reset=1&amp;force=1&amp;id_op=eq&amp;id_value=/';
       $doReplace = TRUE;
     }
     if ($object instanceOf CRM_Report_Form_Contribute_SoftCredit) {
-      $pattern = '/civicrm\/report\/contribute\/detail(\?|&amp;)reset=1&amp;force=1&amp;id_op=eq&amp;id_value=/';
       $link = 'civicrm_contact_display_name_constituent_link';
       $doReplace = TRUE;
     }
     if ($object instanceOf CRM_Report_Form_Contribute_OrganizationSummary) {
-      $pattern = '/civicrm\/report\/contribute\/detail(\?|&amp;)reset=1&amp;force=1&amp;id_op=eq&amp;id_value=/';
       $doReplace = TRUE;
     }
     if ($object instanceOf CRM_Report_Form_Contribute_Lybunt) {
       $doReplace = TRUE;
     }
     if ($object instanceOf CRM_Report_Form_Contribute_TopDonor) {
-      $pattern = '/civicrm\/report\/contribute\/detail(\?|&amp;)reset=1&amp;force=1&amp;id_op=eq&amp;id_value=/';
       $link = 'civicrm_contact_display_name_link';
       $doReplace = TRUE;
     }
