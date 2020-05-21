@@ -66,6 +66,9 @@ function nodrilldown_civicrm_alterReportVar($varType, &$var, &$object) {
       $link = 'civicrm_contact_sort_name_linked';
       $doReplace = TRUE;
     }
+    if ($object instanceOf CRM_Report_Form_Member_Lapse) {
+      $doReplace = TRUE;
+    }
 
     if ($doReplace) {
       foreach ($var as $i => $row) {
