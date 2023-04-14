@@ -16,7 +16,7 @@ function nodrilldown_civicrm_alterReportVar($varType, &$var, &$object) {
     $doReplace = FALSE;
     /* $pattern = '/civicrm\/report\/instance\/\d*(\?|&amp;)reset=1&amp;force=1&amp;id_op=eq&amp;id_value=/'; */
     $pattern = '/civicrm(\/|%2F)report(\/|%2F)instance(\/|%2F)\d*(\?|&amp;|&)reset=1(&amp;|&)force=1(&amp;|&)id_op=eq(&amp;|&)id_value=/';
-    $replace = "civicrm/contact/view${separator}reset=1&cid=";
+    $replace = "civicrm/contact/view{$separator}reset=1&cid=";
     $link = 'civicrm_contact_sort_name_link';
 
     if ($object instanceOf CRM_Report_Form_Campaign_SurveyDetails) {
