@@ -25,5 +25,9 @@
   <comments>There is no unpaid support for this module - but if you submit a bugfix, I'll try to merge it.</comments>
   <civix>
     <namespace>CRM/Nodrilldown</namespace>
+    <format>23.02.1</format>
   </civix>
+  <classloader>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
 </extension>
